@@ -17,16 +17,27 @@ import helper_functions as hf
 
 st.title("Sample App : Phreatic Line")
 
-#import plotly.express as px
-#theta = float(input("Enter the value of theta: "))
-#l = float(input("Enter the value of lambda: "))
-#print("The value of M(lambda) is {M_:.2f}".format(M_ = hf.M(l,theta)))
 
+### Some written content ## 
+
+st.markdown("Implementation of Equation 6 from \
+Phreatic Line Calculation and Stability Analysis of Slopes under the Combined Effect of Reservoir Water Level Fluctuations and Rainfall by Guanhua Sun, Yongtao Yang, Shengguo Cheng, Hong Zheng1")
+
+
+st.markdown("As the first step we calculate ")
+
+st.markdown("$$ Erfc(\lambda) = \frac{2}{\sqrt(\pi)}\int_\lambda^\infty e^{-x^2} dx $$")
+
+st.markdown("We then evaluate")
+st.markdown("$$ M(\lambda) = (1 + 2\lambda^2)Erfc(\lambda) - \frac{2}{\sqrt(\theta)}\lambda{e}^{-\lambda^2}  $$")
 
 theta = st.slider('theta', 0, 90) 
 l = st.slider('lambda', 0, 5)
 
-M =  hf.M(l,theta)
+try: 
+     M =  hf.M(l,theta)
+except ZeroDivisionError : 
+    M = 'zero division error please choose another value'
 M
 
 
