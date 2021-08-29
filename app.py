@@ -45,7 +45,6 @@ except ZeroDivisionError :
 M
 
 
-
 #@title Plotting M(Lambda) 
 ## Plotting M of lambda against lambda for different values of theta
 
@@ -58,6 +57,8 @@ l_array = np.arange(start = 0,stop = 2,step = 0.01)
 
 M_array =[hf.M(el,20) for el in l_array]
 
-st.pyplot(l_array, M_array)
+plt.plot(l_array, M_array)
+
+st.pylot(fig)
 
 
