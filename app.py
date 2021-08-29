@@ -35,8 +35,8 @@ st.latex(r'''
          M(\lambda) = (1 + 2\lambda^2)Erfc(\lambda) - \frac{2}{\sqrt(\theta)}\lambda{e}^{-\lambda^2}
          ''')
 
-theta = st.slider('theta', 0, 90) 
-l = st.slider('lambda', 0, 5)
+theta = st.slider('theta', 0, 90, value = 10) 
+l = st.slider('lambda', 0, 5, value = 0.5)
 
 try: 
      M =  hf.M(l,theta)
