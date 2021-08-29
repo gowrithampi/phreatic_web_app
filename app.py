@@ -15,7 +15,7 @@ import seaborn
 import helper_functions as hf
 
 
-st.title("Sample App : Phreatic Line")
+st.title("Phreatic Line app")
 
 
 ### Some written content ## 
@@ -45,6 +45,7 @@ except ZeroDivisionError :
 M
 
 
+
 #@title Plotting M(Lambda) 
 ## Plotting M of lambda against lambda for different values of theta
 
@@ -57,6 +58,6 @@ l_array = np.arange(start = 0,stop = 2,step = 0.01)
 
 M_array =[hf.M(el,20) for el in l_array]
 
-plt.plot(l_array, M_array)
+st.pyplot(l_array, M_array)
 
 
