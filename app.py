@@ -18,9 +18,17 @@ import helper_functions as hf
 st.title("Sample App : Phreatic Line")
 
 #import plotly.express as px
-theta = float(input("Enter the value of theta: "))
-l = float(input("Enter the value of lambda: "))
-print("The value of M(lambda) is {M_:.2f}".format(M_ = hf.M(l,theta)))
+#theta = float(input("Enter the value of theta: "))
+#l = float(input("Enter the value of lambda: "))
+#print("The value of M(lambda) is {M_:.2f}".format(M_ = hf.M(l,theta)))
+
+
+theta = st.slider('theta', 0, 90) 
+l = st.slider('lambda', 0, 5)
+
+M =  hf.M(l,theta)
+M
+
 
 #@title Plotting M(Lambda) 
 ## Plotting M of lambda against lambda for different values of theta
