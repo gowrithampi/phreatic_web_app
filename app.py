@@ -36,7 +36,7 @@ st.latex(r'''
          ''')
 
 theta = st.slider('theta', 0, 90, value = 10) 
-l = st.slider('lambda', 0, 5, value = 0.5)
+l = st.slider('lambda', 0.0, 5.0, value = 0.5)
 
 try: 
      M =  hf.M(l,theta)
