@@ -2,7 +2,6 @@ streamlit
 pandas
 scipy
 numpy
-math
 matplotlib
 seaborn
 
