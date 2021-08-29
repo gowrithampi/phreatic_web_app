@@ -26,10 +26,14 @@ Phreatic Line Calculation and Stability Analysis of Slopes under the Combined Ef
 
 st.markdown("As the first step we calculate ")
 
-st.markdown("$$ Erfc(\lambda) = \frac{2}{\sqrt(\pi)}\int_\lambda^\infty e^{-x^2} dx $$")
+st.latex('''
+         Erfc(\lambda) = \frac{2}{\sqrt(\pi)}\int_\lambda^\infty e^{-x^2} dx
+         ''')
 
 st.markdown("We then evaluate")
-st.markdown("$$ M(\lambda) = (1 + 2\lambda^2)Erfc(\lambda) - \frac{2}{\sqrt(\theta)}\lambda{e}^{-\lambda^2}  $$")
+st.latex(r'''
+         M(\lambda) = (1 + 2\lambda^2)Erfc(\lambda) - \frac{2}{\sqrt(\theta)}\lambda{e}^{-\lambda^2}
+         ''')
 
 theta = st.slider('theta', 0, 90) 
 l = st.slider('lambda', 0, 5)
