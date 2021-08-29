@@ -59,6 +59,6 @@ M_array =[hf.M(el,20) for el in l_array]
 
 plt.plot(l_array, M_array)
 
-st.pylot(fig)
+st.pyplot(fig)
 
 
